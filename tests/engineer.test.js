@@ -1,4 +1,4 @@
-const engineer = require('../lib/Engineer');
+const Engineer = require('../lib/Engineer');
 
 const tom = {
     name: 'Tom', 
@@ -21,31 +21,31 @@ test('creates engineer object', () => {
 })
 
 test('gets engineer name', () => {
-    const engineer = new engineer(tom)
+    const engineer = new Engineer(name, id, email, github)
 
     expect(engineer.getName()).toBe(name)
 })
 
 test('gets engineer id', () => {
-    const engineer = new engineer(tom)
+    const engineer = new Engineer(name, id, email, github)
 
     expect(engineer.getId()).toEqual(id)
 })
 
 test('gets engineer email', () => {
-    const engineer = new engineer(tom)
+    const engineer = new Engineer(name, id, email, github)
 
     expect(engineer.getEmail()).toBe(email)
 })
 
 test('gets role', () => {
-    const engineer = new engineer(tom)
+    const engineer = new Engineer(name, id, email, github)
 
     expect(engineer.getRole()).toBe('Engineer')
 })
 
 test('gets github id', () => {
-    const engineer = new engineer(tom)
+    const engineer = new Engineer(name, id, email, github)
 
     expect(engineer.getGithub()).toBe(github)
 })
