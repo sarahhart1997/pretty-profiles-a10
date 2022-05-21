@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/sarahhart1997/profile-generator-a10/issues"
   },
-  "homepage": "https://github.com/sarahhart1997/profile-generator-a10#readme"
+  "homepage": "https://github.com/sarahhart1997/profile-generator-a10#readme", 
+  "dependencies": {
+      "inquirer": "8.2.4",
+      "jest": "28.1.0"
+  }
 }
