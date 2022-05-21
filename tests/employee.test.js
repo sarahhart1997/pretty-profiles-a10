@@ -1,11 +1,10 @@
-const { hasUncaughtExceptionCaptureCallback } = require('process');
-const { TestScheduler } = require('rxjs/testing');
-const employee = require('../lib/employee');
+const Employee = require('../lib/Employee');
 
 const Amy = {
     name: 'Amy'
     id: 1, 
     email: 'amy@testemail.com'
+    role: 'Employee'
 }
 
 const { name, id, email } = Amy
@@ -16,29 +15,29 @@ test('creates a new employee object', () => {
     expect(employee.name).toBe(name)
     expect(employee.id).toEqual(id)
     expect(employee.email).toBe(email)
-    expect(employee.role).toBe('employee')
+    expect(employee.role).toBe('Employee')
 })
 
 test('gets the employees name', () => {
-    const employee = new employee(name)
+    const employee = new Employee(name, id, email)
     
-    expect(employee.getName()).toBe(Amy)
+    expect(employee.getName()).toBe(name)
 })
 
 test('gets employee id', () => {
-    const employee = new employee(Amy)
+    const employee = new Employee(name, id, email)
 
     expect(employee.getId()).toEqual(id)
 })
 
 test('gets employee email address', () => {
-    const employee = new employee(Amy)
+    const employee = new Employee(name, id, email)
 
     expect(employee.getEmail()).toBe(email)
 })
 
 test('gets employee role', () => {
-    const employee = new employee(Amy)
+    const employee = new Employee(name, id, email)
 
-    expect(employee.getRole()).toBe('employee')
+    expect(employee.getRole()).toBe('Employee')
 })
