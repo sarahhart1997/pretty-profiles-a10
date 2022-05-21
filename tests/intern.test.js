@@ -1,10 +1,10 @@
-const { TestScheduler } = require('rxjs/testing');
-const Intern = require('../lib/intern');
+const Intern = require('../lib/Intern');
 
 const natalie = {
     name: 'Natalie',
     id: 6,
-    email: 'natalie@testemail.com', 
+    email: 'natalie@testemail.com',
+    role: 'Intern', 
     school: 'Liberty University'
 }
 
