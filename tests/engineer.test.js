@@ -1,9 +1,3 @@
-const { hasUncaughtExceptionCaptureCallback } = require('process');
-const engineer = require('../lib/engineer');
-const engineer = require('../lib/engineer');
-const engineer = require('../lib/engineer');
-const engineer = require('../lib/engineer');
-const engineer = require('../lib/engineer');
 const engineer = require('../lib/engineer');
 
 const tom = {
