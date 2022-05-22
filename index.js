@@ -12,6 +12,7 @@ const runEmployee = () => inquirer.prompt(employeeQuestions);
 const runEngineer = () => inquirer.prompt(engineerQuestions);
 const runIntern = () => inquirer.prompt(internQuestions);
 const runManager = () => inquirer.prompt(managerQuestions);
+const mainMenu = () => inquirer.prompt(employeeType);
 
 const employeeType = [
     {
