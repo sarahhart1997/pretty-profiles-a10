@@ -7,6 +7,15 @@ const Engineer = require('./lib/engineer')
 const Intern = require('./lib/intern')
 const Manager = require('./lib/manager')
 
+
+const employeeType = [
+    {
+    type: 'list', 
+    name: 'role',
+    message: 'Which role will your employee hold?', 
+    choices: ['Employee', 'Engineer', 'Intern', 'Manager']
+    },
+]
 const employeeQuestions = [
     {
         type: 'input', 
@@ -93,3 +102,19 @@ const managerQuestions = [
         name: 'officeNumber', 
     }
 ]
+
+const addEmployee = () => {
+    return inquirer.prompt(employeeQuestions)
+}
+
+const addEngineer = () => {
+    return inquirer.prompt(engineerQuestions)
+}
+
+const addIntern = () => {
+    return inquirer.prompt(internQuestions)
+}
+
+const addManager = () => {
+    return inquirer.prompt(managerQuestions)
+}
