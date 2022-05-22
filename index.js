@@ -7,16 +7,30 @@ const Engineer = require('./lib/engineer')
 const Intern = require('./lib/intern')
 const Manager = require('./lib/manager')
 
-function init() {
+// Inquirer Prompts Defined
+const runEmployee = () => inquirer.prompt(employeeQuestions);
+const runEngineer = () => inquirer.prompt(engineerQuestions);
+const runIntern = () => inquirer.prompt(internQuestions);
+const runManager = () => inquirer.prompt(managerQuestions);
+
+function runCode() {
     return inquirer.prompt(employeeType).then(response => {
-        if (role === 'Employee') {
-            return inquirer.prompt(employeeQuestions)
-        } else if (role === 'Engineer') {
-            return inquirer.prompt(engineerQuestions)
-        } else if (role === 'Intern') {
-            return inquirer.prompt(internQuestions)
-        } else if (role === 'Manager') {
-            return inquirer.prompt(managerQuestions)
+        if (choices === 'Employee') {
+            return runEmployee().then(response => {
+
+            })
+        } else if (choices === 'Engineer') {
+            return runEngineer().then(response => {
+
+            })
+        } else if (choices === 'Intern') {
+            return runIntern().then(response => {
+
+            })
+        } else if (choices === 'Manager') {
+            return runManager().then(response => {
+                
+            })
         }
     })
 }
@@ -130,3 +144,5 @@ const addIntern = () => {
 const addManager = () => {
     return inquirer.prompt(managerQuestions)
 }
+
+runCode ();
