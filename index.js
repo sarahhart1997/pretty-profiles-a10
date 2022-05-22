@@ -7,7 +7,19 @@ const Engineer = require('./lib/engineer')
 const Intern = require('./lib/intern')
 const Manager = require('./lib/manager')
 
-
+function init() {
+    return inquirer.prompt(employeeType).then(response => {
+        if (role === 'Employee') {
+            return inquirer.prompt(employeeQuestions)
+        } else if (role === 'Engineer') {
+            return inquirer.prompt(engineerQuestions)
+        } else if (role === 'Intern') {
+            return inquirer.prompt(internQuestions)
+        } else if (role === 'Manager') {
+            return inquirer.prompt(managerQuestions)
+        }
+    })
+}
 const employeeType = [
     {
     type: 'list', 
