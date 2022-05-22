@@ -3,8 +3,8 @@ const { TestScheduler } = require('rxjs/testing');
 const Manager = require('../lib/Manager');
 
 const tori = {
-    name: 'Natalie',
-    id: 7,
+    name: 'Tori',
+    id: 4,
     email: 'tori@testemail.com',
     role: 'Manager', 
     officeNumber: '8'

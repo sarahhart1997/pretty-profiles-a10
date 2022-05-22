@@ -2,7 +2,7 @@ const Intern = require('../lib/Intern');
 
 const natalie = {
     name: 'Natalie',
-    id: 6,
+    id: 3,
     email: 'natalie@testemail.com',
     role: 'Intern', 
     school: 'Liberty University'

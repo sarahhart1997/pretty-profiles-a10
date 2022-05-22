@@ -2,7 +2,7 @@ const Engineer = require('../lib/Engineer');
 
 const tom = {
     name: 'Tom', 
-    id: 3, 
+    id: 2, 
     email: 'tom@testemail.com',
     role: 'Engineer',
     github: 'tomexample'
