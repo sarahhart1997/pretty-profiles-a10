@@ -108,16 +108,19 @@ const managerQuestions = [
     }
 ]
 
-function runCode() {
+function runCode(employeeType) {
     return inquirer.prompt(employeeType).then(response => {
-        var typeResponse = employeeType.data
-        if (typeResponse.role === 'Employee') {
+        var role = data.role
+        if (role === 'Employee') {
             return runEmployee()
-        } else if (role === 'Engineer') {
+        } 
+        if (role === 'Engineer') {
             return runEngineer()
-        } else if (role === 'Intern') {
+        } 
+        if (role === 'Intern') {
             return runIntern()
-        } else if (role === 'Manager') {
+        } 
+        if (role === 'Manager') {
             // return runManager().then(response => {
                 
             // })
