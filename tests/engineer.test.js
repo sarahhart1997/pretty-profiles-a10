@@ -3,15 +3,15 @@ const Engineer = require('../lib/Engineer');
 const tom = {
     name: 'Tom', 
     id: 3, 
-    email: 'tom@testemail.com'
-    role: 'Engineer'
+    email: 'tom@testemail.com',
+    role: 'Engineer',
     github: 'tomexample'
 }
 
 const {name, id, email, github} = tom
 
 test('creates engineer object', () => {
-    const engineer = new engineer(name, id, email, github)
+    const engineer = new Engineer(name, id, email, github)
 
     expect(engineer.name).toBe(name)
     expect(engineer.id).toEqual(id)

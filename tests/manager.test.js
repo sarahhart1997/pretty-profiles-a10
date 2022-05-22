@@ -10,7 +10,7 @@ const tori = {
     officeNumber: '8'
 }
 
-const { name, id, email, school } = tori
+const { name, id, email, officeNumber } = tori
 
 test('gets manager name', () => {
     const manager = new Manager(name, id, email, officeNumber)

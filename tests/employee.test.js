@@ -1,17 +1,17 @@
 const Employee = require('../lib/Employee');
-
+var test = 'Employee';
 const Amy = {
-    name: 'Amy'
+    name: 'Amy',
     id: 1, 
-    email: 'amy@testemail.com'
+    email: 'amy@testemail.com',
     role: 'Employee'
 }
 
-const { name, id, email } = Amy
+const { name, id, email, role} = Amy
 
 test('creates a new employee object', () => {
-    const employee = new employee('Amy', 1, 'amy@testmail.com')
-
+    const employee = new Employee(name, id, email, role)
+console.log(employee)
     expect(employee.name).toBe(name)
     expect(employee.id).toEqual(id)
     expect(employee.email).toBe(email)
