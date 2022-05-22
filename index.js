@@ -112,7 +112,7 @@ function runCode(data) {
     return inquirer.prompt(employeeType).then(response => {
         if (response.role === 'Employee') {
             return runEmployee().then(response => {
-
+// Write all to employees array somehow to send to createHTML.js
             })
         } 
         if (response.role === 'Engineer') {
