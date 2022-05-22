@@ -13,27 +13,6 @@ const runEngineer = () => inquirer.prompt(engineerQuestions);
 const runIntern = () => inquirer.prompt(internQuestions);
 const runManager = () => inquirer.prompt(managerQuestions);
 
-function runCode() {
-    return inquirer.prompt(employeeType).then(response => {
-        if (choices === 'Employee') {
-            return runEmployee().then(response => {
-
-            })
-        } else if (choices === 'Engineer') {
-            return runEngineer().then(response => {
-
-            })
-        } else if (choices === 'Intern') {
-            return runIntern().then(response => {
-
-            })
-        } else if (choices === 'Manager') {
-            return runManager().then(response => {
-                
-            })
-        }
-    })
-}
 const employeeType = [
     {
     type: 'list', 
@@ -129,20 +108,21 @@ const managerQuestions = [
     }
 ]
 
-const addEmployee = () => {
-    return inquirer.prompt(employeeQuestions)
-}
-
-const addEngineer = () => {
-    return inquirer.prompt(engineerQuestions)
-}
-
-const addIntern = () => {
-    return inquirer.prompt(internQuestions)
-}
-
-const addManager = () => {
-    return inquirer.prompt(managerQuestions)
+function runCode() {
+    return inquirer.prompt(employeeType).then(response => {
+        var typeResponse = employeeType.data
+        if (typeResponse.role === 'Employee') {
+            return runEmployee()
+        } else if (role === 'Engineer') {
+            return runEngineer()
+        } else if (role === 'Intern') {
+            return runIntern()
+        } else if (role === 'Manager') {
+            // return runManager().then(response => {
+                
+            // })
+        }
+    })
 }
 
 runCode ();
