@@ -16,7 +16,7 @@ const runManager = () => inquirer.prompt(managerQuestions);
 const employeeType = [
     {
     type: 'list', 
-    name: 'role',
+    name: 'roleName',
     message: 'Which role will your employee hold?', 
     choices: ['Employee', 'Engineer', 'Intern', 'Manager']
     },
@@ -108,9 +108,8 @@ const managerQuestions = [
     }
 ]
 
-function runCode(employeeType) {
+function runCode(data) {
     return inquirer.prompt(employeeType).then(response => {
-        var role = data.role
         if (role === 'Employee') {
             return runEmployee()
         } 
